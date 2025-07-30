@@ -1,0 +1,109 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f7dac6;
+}
+
+p {
+    font-family: monospace;
+}
+
+h1, h2 {
+    color: #351208;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navlinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #192815;
+    transition: all .5s ease;
+}
+
+li a:hover {
+    background-color: #8DB143;
+    transition: all .5s ease;
+}
+
+.card_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the whole grid */
+    max-width: 1200px; /* Max width for the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+.add_card {
+    background-color: #8DB143;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures image corners are rounded */
+    display: flex; /* Use flexbox to arrange content INSIDE the card */
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom if content varies */
+    transition: all .5s ease;
+    text-align: center;
+}
+
+.plant_card {
+    background-color: #8DB143;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures image corners are rounded */
+    display: flex; /* Use flexbox to arrange content INSIDE the card */
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom if content varies */
+    transition: all .5s ease;
+}
+
+.plant_img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent image size */
+    object-fit: cover;
+    display: block;
+}
+
+.plant_card h3 {
+    padding: 15px;
+    margin-bottom: 0;
+    font-size: 1.2em;
+}
+
+.plant_card p {
+    padding: 0 15px 15px;
+    font-size: 1em;
+    flex-grow: 1; /* Allows paragraphs to take up available space */
+}
+
+.plant_card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transform: translate3D(0,-1px,0) scale(1.03);
+    background-color: #192815;
+    color: white;
+    transition: all .5s ease;
+}
+
+.add_card:hover {
+    background-color: #192815;
+    transition: all .5s ease;
+    transform: translate3D(0,-1px,0) scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
