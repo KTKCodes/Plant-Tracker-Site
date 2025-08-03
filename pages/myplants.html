@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plant Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,7 +18,12 @@
         </ul>
     </div>
 
-    <div class="card_grid">
+    <div id="card_grid">
+        <div id="add_card">
+            <i class="fa-solid fa-plus plus-icon"></i>
+            <h2>Add New Plant</h2>
+        </div>
+
         <div class="plant_card">
             <img class="plant_img" src="..\assets\Neonpothos.webp">
             <h3>Broden</h3>
@@ -53,11 +59,32 @@
             <h3>Pinky</h3>
             <p>Philodendron Pink Princess <br> Last Watered:</p>
         </div>
-
-        <div class="add_card">
-            <h3>Add New Plant</h3>
-        </div>
     </div>
 
+    <div id="form-modal-overlay" class="modal-overlay">
+            <div class="modal-content">
+                <span id="close-modal-btn" class="close-btn">&times;</span>
+                <h2 class="form-label site-title">Add a New Plant</h2>
+                <form id="plant-form" class="form-container">
+                    <div class="form-group">
+                        <label for="plant-name" class="form-label">Plant Name</label>
+                        <input type="text" id="plant-name" name="plant-name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="plant-species" class="form-label">Plant Species</label>
+                        <input type="text" id="plant-species" name="plant-species" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image-url" class="form-label">Image URL</label>
+                        <input type="text" id="image-url" name="image-url" class="form-input" placeholder="e.g., https://placehold.co/400x250">
+                    </div>
+                    <button type="submit" class="form-button">
+                        Add Plant
+                    </button>
+                </form>
+            </div>
+        </div>
+
+<script src="..\scripts\myplants.js"></script>
 </body>
 </html>
